@@ -1,20 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <p class="information-text">
+    Downloader para musicas no YT.
+  </p>
+  <main class="container">
+    <div class="form">
+      <label for="url">URL</label>
+      <input
+        type="text"
+        id="url"
+        name="url"
+        placeholder="Digite aqui a sua URL"
+        [(ngModel)]="url">
+        <button type="button" (click)="requestDownloadMusic()">Enviar</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>Crated by <a href="#">Viniciu cristian</a></p>
+  </footer>
 </ion-content>
