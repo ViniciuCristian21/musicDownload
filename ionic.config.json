@@ -1,0 +1,7 @@
+{
+  "name": "musicDownload",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
