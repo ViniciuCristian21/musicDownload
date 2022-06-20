@@ -11,7 +11,16 @@ export class HomePage {
   constructor() {}
 
   requestDownloadMusic() {
-    document.location.assign(`https://yt-download-sound.herokuapp.com/download?url=${this.url}`)
+    try {
+      console.log("[Initializing] try request")
+      document.location.assign(`https://yt-download-sound.herokuapp.com/download?url=${this.url}`);
+    } catch (err) {
+      console.log("[ERROR] error console")
+      console.log(err.message)
+    } finally {
+      console.log("[Finally] Finalization of the request");
+      this.url = "";
+    }
   }
 
 }
